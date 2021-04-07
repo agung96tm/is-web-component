@@ -1,0 +1,24 @@
+@import "../../global/variables.scss";
+
+$shadow: 0 5px 15px rgb(0 0 0 / 8%) !default;
+
+:host {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  box-shadow: $shadow;
+}
+
+:host(.is-disabled) {
+  cursor: default;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.is-card {
+  background-color: $white-bg;
+  border-radius: 4px;
+  color: $dark-bg;
+  max-width: 100%;
+  position: relative;
+}
