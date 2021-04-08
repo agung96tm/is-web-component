@@ -1,6 +1,9 @@
+$card-body-padding-vertical: 20px !default;
+$card-body-padding-horizontal: 40px !default;
+
 :host {
   border-radius: 0.5rem;
   display: block;
   background-color: transparent;
-  padding: 1.5rem;
+  padding: $card-body-padding-vertical $card-body-padding-horizontal;
 }

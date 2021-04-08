@@ -2,7 +2,7 @@ import { Component, Host, h } from '@stencil/core';
 
 @Component({
   tag: 'is-card-title',
-  styleUrl: 'is-card-title.css',
+  styleUrl: 'card-title.scss',
   shadow: true,
 })
 export class CardTitle {
