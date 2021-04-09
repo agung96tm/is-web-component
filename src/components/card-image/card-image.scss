@@ -1,0 +1,16 @@
+@import "../../global/variables.scss";
+
+$card-radius: 0.25rem !default;
+$shadow: 0 0.125em 0.25em rgba($black-bg, 0.1) !default;
+
+:host {
+  display: block;
+  position: relative;
+
+  img {
+    height: auto;
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+  }
+}
+
