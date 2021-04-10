@@ -1,4 +1,5 @@
-import {Component, Host, h, Prop} from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
+import {Ratio} from "../../interfaces";
 
 @Component({
   tag: 'is-card-image',
@@ -9,11 +10,15 @@ export class CardImage {
   @Prop({ reflect: true }) src: string;
   @Prop({ reflect: true }) alt?: string;
 
+  @Prop() ratio?: Ratio;
+
   render() {
-    const { src, alt } = this;
+    const { src, alt, ratio } = this;
 
     return (
-      <Host>
+      <Host class={{
+        [`is-${ratio}`]: ratio !== undefined,
+      }}>
         <img src={src} alt={alt}/>
       </Host>
     );

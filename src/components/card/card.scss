@@ -1,24 +1,35 @@
 @import "../../global/variables.scss";
 
-$shadow: 0 5px 15px rgb(0 0 0 / 30%) !default;
+$card-shadow: 0 5px 15px rgb(0 0 0 / 30%) !default;
+$card-radius: 0.5rem !default;
 
 :host {
   display: block;
   position: relative;
   overflow: hidden;
-  box-shadow: $shadow;
+  box-shadow: $card-shadow;
+  border-radius: $card-radius;
 }
 
-:host(.is-disabled) {
-  cursor: default;
-  opacity: 0.3;
-  pointer-events: none;
+:host a {
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
 }
+
 
 .is-card {
   background-color: $white-bg;
-  border-radius: 4px;
   color: $dark-bg;
   max-width: 100%;
   position: relative;
+
+  // colors
+  @each $name, $color in $colors {
+    &.is-#{$name} {
+      color: set-text-color($color);
+      background-color: $color;
+    }
+  }
 }
