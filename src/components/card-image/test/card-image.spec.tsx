@@ -10,7 +10,7 @@ describe('is-card-image', () => {
     expect(page.root).toEqualHtml(`
       <is-card-image>
         <mock:shadow-root>
-          <slot></slot>
+          <img />
         </mock:shadow-root>
       </is-card-image>
     `);

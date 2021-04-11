@@ -10,7 +10,9 @@ describe('is-card', () => {
     expect(page.root).toEqualHtml(`
       <is-card>
         <mock:shadow-root>
-          <slot></slot>
+          <div class="is-card">
+            <slot></slot>
+          </div>
         </mock:shadow-root>
       </is-card>
     `);
